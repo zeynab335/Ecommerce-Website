@@ -1,0 +1,61 @@
+// start header-navbar
+include mixin_categories.pug 
++styleSheet_categories(" الملابس")
++navbar_catecories
+// end header-navbar
+
+// start show kinds of electronic categoriy
+.All_Kind_category
+    .container
+        .row
+            +show-kinds-oneCategory("../images/cloth/Man/1.jpg","ملابس رجالي ","first")
+            +show-kinds-oneCategory("../images/cloth/Women/w3.jpg","  ملابس بنات" , "second")
+            +show-kinds-oneCategory("../images/cloth/child/b5.jpg"," ملابس أطفال" , "third")
+// end show kinds of electronic categoriy
+
+.clearfix
+
+div#intro
+
+//////////////////////////////////////////////////////////////////////////////
+// ملابس ولادي
+- var category_array_info1 = ["../images/cloth/man/1.jpg" , "قميص رجالي" ," 140 جنيه " , "200 جنيه" ]
+- var category_array_info2 = ["../images/cloth/man/815e11ce9ed6d99e74d06cf735925869.jpg" , " تيشيرت رجالي" ," 100 جنيه " , "60 جنيه" ]
+- var category_array_info3 = ["../images/cloth/man/pexels-photo-1103828.jpeg" , " طقم رياضي" ," 850 جنيه " , "425 جنيه" ]
+- var category_array_info4 = ["../images/cloth/man/m4.jpg" , " تيشيرت اسود" ," 126 جنيه " , "180 جنيه" ]
+- var category_array_info5 = ["../images/cloth/man/man.jpg" , "  سويتشيرت ابيض" ," 186 جنيه " , "280 جنيه" ]
+
+
++category_showInfo("first" , " ملابس رجالي" , [category_array_info1 , category_array_info2 , category_array_info3 , category_array_info4, category_array_info5 ] )
+
+//////////////////////////////////////////////////////////////////////////////
+// ملابس بناتي
+
+- var category_array_info1 = ["../images/cloth/women/w1.jpg" , " تيشيرت بناتي" ," 140 جنيه " , "200 جنيه" ]
+- var category_array_info2 = ["../images/cloth/women/w2.jpg" , "  دريس" ," 150 جنيه " , "250 جنيه" ]
+- var category_array_info3 = ["../images/cloth/women/w3.jpg" , "  هاي كول بناتي" ," 75 جنيه " , "150 جنيه" ]
+- var category_array_info4 = ["../images/cloth/women/w4.jpg" , " تيشيرت اسود وبنطلون" ," 850 جنيه " , "1000 جنيه" ]
+- var category_array_info5 = ["../images/cloth/women/pexels-photo-1642228.jpeg" , "   سلوبيت بناتي" ," 1000 جنيه " , "800 جنيه" ]
+
+
++category_showInfo("second" , "  ملابس بنات" , [category_array_info1 , category_array_info2 , category_array_info3 , category_array_info4, category_array_info5 ] )
+
+//////////////////////////////////////////////////////////////////////////////
+//  ملابس اطفال
+
+- var category_array_info1 = ["../images/cloth/child/b1.jpg" , " فستان أسود بناتي" ," 550 جنيه " , "440 جنيه" ]
+- var category_array_info2 = ["../images/cloth/child/b2.jpg" , " فستان مشجر " ," 580 جنيه " , "500 جنيه" ]
+- var category_array_info3 = ["../images/cloth/child/b3.jpg" , "  بلوزه" ," 400 جنيه " , "350 جنيه" ]
+- var category_array_info4 = ["../images/cloth/child/b4.jpg" , "  بيجامات بناتي " ," 190 جنيه " , "150 جنيه" ]
+- var category_array_info5 = ["../images/cloth/child/b5.jpg" , "   مايوه" ," 300 جنيه " , "250 جنيه" ]
+
++category_showInfo("third" , " ملابس أطفال" , [category_array_info1 , category_array_info2 , category_array_info3 , category_array_info4, category_array_info5 ] )
+
+
+
+// end show information of all kinds of ele categoriy
+
+
+
+include ../../footer/footer.pug
++scripts

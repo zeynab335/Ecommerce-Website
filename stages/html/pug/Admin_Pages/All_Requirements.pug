@@ -1,0 +1,68 @@
+include ../home-page/Header_Categories/mixin_categories.pug
+
++styleSheet_categories("عرض الطلبات")
+link(rel="stylesheet", href="../../css/Admin_Pages/Admin.css")
+
+include mixin_admin_page.pug
++navbar_Admin_page
+
+.clearfix
+
+// start show_all_product
+.All_Requirements_page
+    .show_All_Requirements
+        h3  عرض جميع الطلبات (3)
+    .container
+        .row
+            .col-lg-4
+                .show_All_info  
+                    h4 الأسم : 
+                    hr
+                    p العنوان : 
+                    p رقم التلفون : 
+                    p نوع الدفع : 
+                    p لون المنتج : 
+                    p الحجم : 
+                    p الكمية : 
+                    p التاريخ : 
+                    .confirm_req
+                        button.btn.btn-block.btn-confirm_req(type='button') تأكيد الطلب    
+                        
+
+            .col-lg-4
+                .show_All_info  
+                    h4 الأسم : 
+                    hr
+                    p العنوان : 
+                    p رقم التلفون : 
+                    p نوع الدفع : 
+                    p لون المنتج : 
+                    p الحجم : 
+                    p الكمية : 
+                    p التاريخ :
+                    .confirm_req
+                        button.btn.btn-block.btn-confirm_req(type='button') تأكيد الطلب    
+                        
+
+            .col-lg-4
+                .show_All_info  
+                    h4 الأسم : 
+                    hr
+                    p العنوان : 
+                    p رقم التلفون : 
+                    p نوع الدفع : 
+                    p لون المنتج : 
+                    p الحجم : 
+                    p الكمية :  
+                    p التاريخ : 
+                    .confirm_req
+                        button.btn.btn-block.btn-confirm_req(type='button') تأكيد الطلب    
+
+// end show_all_product
+
+
+
+// include scripts function
++scripts
+script(src='../../js/admin_pages/All_requirement.js')  
+

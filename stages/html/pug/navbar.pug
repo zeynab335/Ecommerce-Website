@@ -1,0 +1,53 @@
+// strat function of header_search
+mixin header_search(login_link , register_link , card_link)
+    .header-intro
+        .row
+                        
+            .col-lg
+                .header-img: img(src="../images/img_header.jpg")
+            .clearfix
+
+            .col-lg-6
+                .header-search
+                    input.input-search.form-control.form_acion.mr-sm-2(type='search', placeholder='ابحث عن منتجك الان...', aria-label='Search')
+                    button.btn.btn-dark.btn-search(type='button'): i.fas.fa-search
+                .clearfix
+            
+            .col-lg.col-md-6.col-xs-6
+                .user-info  
+                    i.fas.fa-user-circle.fa-2x.text-center
+                    // start login
+                    .login-info
+                        .dropdown
+                            h3.h4#dropdown_login.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                                |تسجيل الدخول 
+                            .dropdown-menu.login-toggle.animation.left(aria-labelledby="#dropdown_login")
+                                button.btn.login-button: a.dropdown-item(href=login_link) دخول
+                                a.dropdown-item(href=register_link) 
+                                    |   لا تمتلك حساب؟
+                                    br
+                                    i.fas.fa-arrow-circle-down
+                                    br
+                                    span سجل الأن
+                    // end login
+                    
+                    // strat user-cart
+                .user-cart.text-center
+                    .card_intro 1
+                    a(href=card_link): i.fas.fa-cart-arrow-down.fa-2x 
+                    a(href=card_link): h4 السلة
+                .clearfix
+                    // strat user-cart
+
+
+
+mixin header_links(All_links_header)
+    .header-links
+            .container-fluid
+                ul.header-links-list.list-unstyled
+                    .row
+                        each item in All_links_header
+                            .col-sm: li: a(href=item[0]) #{item[1]}
+
+
+

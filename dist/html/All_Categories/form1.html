@@ -1,0 +1,125 @@
+
+<!-- strat function of header_search-->
+<!-- start function of navbar and header-links-->
+<!-- end function of navbar and header-links-->
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<!-- start show-kinds-oneCategory-->
+<!-- end show-kinds-oneCategory-->
+<!--///////////////////////////////////////////////////////////////////////////-->
+<!-- start show information of all kinds of ele categoriy-->
+<!-- end show information of all kinds of ele categoriy-->
+<!-- start function of  scripts -->
+<!-- end function of scripts-->
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>  الخطوة الأولى</title>
+  <!-- link of bootstrab css-->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+  <!-- link of fontawsem -->
+  <link rel="stylesheet" href="../../css/all.min.css"/>
+  <!-- link of hover libaray     -->
+  <link rel="stylesheet" href="../../css/hover-min.css"/>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="stylesheet" href="../../css/categories/header_All_Categori.css"/>
+  <link rel="stylesheet" href="../../css/Admin_Pages/Admin.css"/>
+  <link rel="stylesheet" href="../../css/categories/forms.css"/>
+</head>
+<div class="form_nav">
+  <div class="container">
+    <div class="form_col_nav">
+      <div id="step_one"><span class="step_one">الشحن</span>
+        <p>1</p>
+      </div>
+      <div id="step_two"><span class="step_two">الدفع</span>
+        <p>2</p>
+      </div>
+      <div id="step_three"><span class="step_three">تأكيد الدفع</span>
+        <p>3</p>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="form charge">
+  <div class="container">
+    <p> الخطوة الأولى</p>
+    <div class="clearfix"></div>
+    <div class="row">
+      <!-- strat col 1-->
+      <div class="col-lg-9 form_col">
+        <div class="form_col_header"><i class="fas fa-check-circle form_col_header_icon"></i><span>تفاصيل شراء المنتج</span></div>
+        <div class="clearfix">   </div>
+        <hr/>
+        <form action="form2.html">
+          <div class="form-row">
+            <!-- start name-->
+            <div class="form-group col-md-6">
+              <label for="Name1">الإسم الاول*</label>
+              <input class="form-control form_acion" id="Name1" type="text" required="required"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Name2">أسم العائلة*</label>
+              <input class="form-control form_acion" id="Name2" type="text" required="required"/>
+            </div>
+            <!-- end name    -->
+          </div>
+          <!-- start address-->
+          <div class="form-group">
+            <label for="address1">المحافظة*</label>
+            <input class="form-control form_acion" id="address1" type="text" required="required"/>
+          </div>
+          <div class="clearfix"> </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="city">المدينة*</label>
+              <input class="form-control form_acion" id="city" type="text" required="required"/>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="area">المنطقة* </label>
+              <select class="form-control form_acion" id="inputState">
+                <option selected="">اختار...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="state_num">رقم الشارع*</label>
+              <input class="form-control form_acion" id="inputZip" type="text" required="required"/>
+            </div>
+            <!-- end  address -->
+          </div>
+          <div class="clearfix"></div>
+          <!-- start phone number-->
+          <div class="form-group">
+            <label>رقم الهاتف الجوال*</label>
+          </div>
+          <div class="clearfix">   </div>
+          <div class="form-row">
+            <div class="form-group col-xs-3">
+              <label class="phone_num" for="phone_num">
+                <p>+20</p>
+              </label>
+            </div>
+            <div class="form-group col-xs-6">
+              <input class="form-control form_acion" id="phone_num" type="phone" required="required"/>
+            </div>
+          </div>
+          <!-- end phone number-->
+          <div class="clearfix"></div>
+          <button class="btn btn_form btn-lg btn-block" type="submit">احفظ وتابع</button>
+        </form>
+      </div>
+      <!-- end col 1-->
+      <div class="clearfix"> </div>
+      <div class="col-lg form_col product_info animation left">
+        <div>
+          <p>عليك دفع مبلغ قدره</p>
+          <p class="sum"> 225 جنية</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/Categories_js/form.js"></script>

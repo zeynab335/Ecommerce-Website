@@ -1,0 +1,68 @@
+
+
+.Adevertis{
+    //background-color: black;
+    color: white;
+    float: right;
+    padding-top: 2%;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    // start container of Adevertis
+    .container{
+        height: 100%;
+        .row{
+            .right-adevertis{
+                display: none;
+                h2{
+                    float: $floar-right;
+                }
+                // start carousel of Advertiement
+                .carousel{
+                    width: 100%;
+                    height: 100%;
+                    .carousel-inner{
+                        height: 100%;
+                        .carousel-item{
+                            img{
+                                height: 400px;
+                            }
+                        }
+                    }
+                    .carousel-control-prev,
+                    .carousel-control-next{
+                        background-color: $main-color;
+                        opacity: 0.8;
+                        left: 0;
+                        height: 10%;
+                        width: 5%;
+                        top: 30%;
+                    }       
+                    .carousel-indicators li {background-color: white;}
+
+                }
+                // end carousel of Advertiement
+
+            }
+
+            // end right-adevertis
+
+            // start left-adevertis
+            .left-adevertis{
+                width: 100%;
+                height: 100%;
+                display: none;
+                img{
+                    width: 100%;
+                    height: 400px;
+                    float: left;
+                }
+            }
+        }
+        
+    }
+    // end container of Adevertis
+
+    
+}

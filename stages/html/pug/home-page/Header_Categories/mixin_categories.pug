@@ -1,0 +1,110 @@
+include ../../navbar.pug
+
+// start function of navbar and header-links
+mixin styleSheet_categories(page_title)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title  #{page_title}
+        // link of bootstrab css
+        link(rel="stylesheet", href="../../css/bootstrap.min.css")
+        // link of fontawsem 
+        link(rel="stylesheet", href="../../css/all.min.css")
+        // link of hover libaray     
+        link(rel="stylesheet", href="../../css/hover-min.css")
+        link(rel="stylesheet", href="../../css/main.css")
+        link(rel="stylesheet", href="../../css/categories/header_All_Categori.css")
+        link(rel="stylesheet", href="../../css/Admin_Pages/Admin.css")
+        link(rel="stylesheet", href="../../css/categories/forms.css")
+
+
+mixin navbar_catecories
+    // start header intro => navbar                  
+    +header_search("../Admin_Pages/login.html" , "../Admin_Pages/register.html" , "../All_Categories/card.html")    
+    // end header intro => navbar  
+
+    // start header links
+    +header_links([["header_All_Categori.html","جميع الفئات"],["header_ele_categories.html"," الالكترونيات"],["header_cloth_categories.html"," ملابس"],["header_games_categories.html"," الالعاب"],['../index.html','رجوع للصفحة الرئيسية']])
+    // end header links
+
+// end function of navbar and header-links
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+// start show-kinds-oneCategory
+mixin show-kinds-oneCategory(image_src,image_name,category_name)
+    .col-lg.col-md-5.col-xs-12.show_kind-col
+        .image_src
+            img(src=image_src)
+        .clearfix
+        .image_name
+            h4.category_kind_name(class=category_name) #{image_name}
+    .clearfix        
+// end show-kinds-oneCategory
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+// start show information of all kinds of ele categoriy
+mixin category_showInfo(category_id , category_kind_header , category_array_info )
+    .category_showInfo.animation.right(id=category_id)
+        .container
+            .row
+                .category_showInfo_header
+                    hr.right
+                    h2  #{category_kind_header}
+                    hr.left
+                each item in category_array_info
+                    .col-lg-4.col-sm-6.category_showInfo_col
+                        .category_showInfo_image
+                            .show_product
+                                p.text-center: a(href="show_product.html")  عرض المنتج
+                            img(src=item[0], alt="")
+                        .clearfix  
+                        
+                        .category_showInfo_information
+                            p.lead #{item[1]}
+                            p.lead.before_Discount السعر: #{item[2]}
+                            p.lead.after_Discount السعر بعد الخصم: #{item[3]} 
+                        .clearfix  
+                        br
+
+                        // start evaluate product 
+                        .evaluate_product
+                            i.far.fa-star
+                            i.far.fa-star
+                            i.far.fa-star
+                            i.far.fa-star
+
+                        // end evaluate product
+
+                        .category_showInfo_card
+                            button.btn
+                                a(href= "card.html")  اضافة الي العربة
+                    .clearfix 
+// end show information of all kinds of ele categoriy
+
+
+
+// start function of  scripts 
+
+mixin scripts
+    script(src="../../js/jquery.js")
+    // start popper.js 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    // start popper.js  
+    script(src="../../js/bootstrap.min.js")
+    script(src="../../jq/All_jq.js")
+
+    script(src="../../js/Categories_js/categories.js")
+    script(src="../../js/Categories_js/form.js")
+
+
+
+
+// end function of scripts
+
+

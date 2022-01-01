@@ -1,0 +1,54 @@
+include ../home-page\Header_Categories\mixin_categories.pug 
++styleSheet_categories("  تفاصيل المتجر ")
+link(rel="stylesheet", href="../../css/Sales_policy/All_Steps_sales.css")
+
+.form_nav
+    .container
+        .form_col_nav
+            #step_one.active_step
+                span.step_one شروط البيع
+                p 1
+            #step_two.active_step
+                span.step_two تفاصيل المتجر
+                p 2
+        hr
+
+.clearfix
+.form.step2_page
+    .container
+        p  الخطوة الأولى
+        .clearfix
+        
+        .row
+            // strat col 1
+            .col-lg-9.form_col
+                .form_col_header
+                    i.fas.fa-check-circle.form_col_header_icon.active_step
+                    span تفاصيل  المتجر
+                .clearfix    
+                hr
+                h2  أسم المتجر غير قابل للتعديل 
+
+                .clearfix
+                    
+                    
+                form(action="step2.html")
+        
+                    // start name of company  
+                    label   اسم المتجر :
+                    .clearfix
+                    .form-group.col-md-6
+                        input.form-control.form_acion.input_sales(type='text' required placeholder='اسم المتجر..')
+
+
+
+                    // end  name of company 
+                    button.btn.btn_form.btn-lg.btn-block(type='submit')
+                        |  تأكيد
+            
+            // end col 1
+
+
+
+script(src="../../js/jquery.js")
+script(src="../../js/Categories_js/form.js")

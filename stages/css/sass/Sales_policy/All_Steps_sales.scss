@@ -1,0 +1,63 @@
+@import "../layout/variables";
+
+// start All steps 
+
+// start step one page
+.step1_page,.step2_page{
+    p.info_sales{
+        margin-top: 25px ;
+        padding-right: 20px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 0;
+            width: 10px;
+            height: 10px ;
+            background-color: $sec-color;
+            border-radius: 50%;
+        }
+    }
+    h2{
+        margin-top: 25px;
+        text-align: center;
+        color: red;
+    }
+
+    // start form of step 1
+    form{
+        input.sales_checkbox{
+            float: right;
+            margin-top: 12px !important;
+        }
+        label{
+            margin-right: 20px;
+            font-size: 25px !important;
+            font-family: $main-font !important;
+            color: $font-color !important;
+            margin-bottom: 20px;
+            float: right;
+        }
+        select{
+            width: 40%;
+            float: right;
+            margin-bottom: 25px;
+            padding: 5px;
+        }
+        input.input_sales{
+            margin-bottom: 45px ;
+        }
+    }
+
+    // end form of step 1
+
+
+}
+
+
+// end step one page
+
+
+
+// end all steps

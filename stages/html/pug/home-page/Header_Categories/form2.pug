@@ -1,0 +1,109 @@
+include mixin_categories.pug 
++styleSheet_categories("الخطوة الثانية")
+
+.form_nav
+    .container
+        .form_col_nav
+            #step_one.active_step
+                span.step_one الشحن
+                p 1
+            #step_two.active_step
+                span.step_two الدفع
+                p 2
+                
+            #step_three
+                span.step_three تأكيد الدفع
+                p 3
+                
+        hr
+.clearfix
+
+// start form 2
+
+.form.form_st2
+    .container
+        p  الخطوة الثانية
+        .clearfix
+        
+        .row
+            .col-lg-9.form_col
+                .form_col_header
+                    i.fas.fa-check-circle.form_col_header_icon.active_step
+                    span  طريقة الدفع 
+                .clearfix    
+                hr
+                form(action='#form3' name="myform" novalidate)
+                    .form-check
+                        input#R_btn_option1.R_btn_option.form-check-input(type='radio', name='R_btn_option', value='option1')
+                        label.form-check-label(for='R_btn_option1')
+                            .row
+                                .col-lg-9
+                                    | بطائة الائتمان أو الخصم المباشر
+                                .col-lg-3
+                                    p.icon
+                                        i.fas.fa-universal-access
+                                        i.fas.fa-universal-access
+                                        i.fas.fa-universal-access
+    
+
+                    
+                    // strat .buy_by_option1
+                    .buy_by_option1 
+                        .form-group
+                            label(for='card_num') رقم البطاقة المتوفرة *
+                            input#card_num.form-control.form_acion(type='text' required)
+                        
+                        .clearfix
+
+                        .form-group
+                            label(for='card_name') الأسم كما في البطاقة *
+                            input#card_name.form-control.form_acion(type='text' required)
+                        .clearfix 
+
+                        .form-group
+                            label تاريخ الانتهاء *
+                        .clearfix    
+                        .form-row
+                            .form-group.col-md-2
+                                input.form-control.form_acion(type='text' required)
+                            .form-group.col-md-2
+                                input.form-control.form_acion(type='text' required)
+                        .clearfix
+                        .form-check
+                            input#save_card.form-check-input(type='checkbox')
+                            label.form-check-label(for='save_card') إحفظ البطاقة للإستخدام مستقبلًا
+
+                    // end .buy_by_option1
+
+
+                    .form-check
+                        input#R_btn_option2.R_btn_option.form-check-input(type='radio', name='R_btn_option', value='option2')
+                        label.form-check-label(for='R_btn_option2')
+                            | الدفع عند الاستلام
+                    
+                    // strat .buy_by_option2
+                    .buy_by_option2 يتم إضافة مبلغ قدره 15 جنيه عند استلام المنتج
+                    // end .buy_by_option2
+
+                    .clearfix
+                    button.btn.btn_form.btn-lg.btn-block(type='submit' disabled)
+                        |  تأكيد  
+
+
+            .clearfix 
+            .col-lg.form_col.product_info.animation.left
+                div
+                    p عليك دفع مبلغ قدره
+                    p.sum  225 جنية
+
+
+// end form 2
+
+// start form 3
+#form3
+// end form3
+
+
+
+
++scripts

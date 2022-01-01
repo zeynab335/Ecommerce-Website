@@ -1,0 +1,28 @@
+// start header-navbar
+include mixin_categories.pug 
++styleSheet_categories(" الملابس")
++navbar_catecories
+// end header-navbar
+
+//["src='images/games/g7.jpg' title= '   شنطه ولانش بوكس ومقلمه' class='dis-50'" , "1500 " , 4 ,"  شنطه ولانش بوكس ومقلمه "] , ["src='images/games/g8.jpg' title= '    شنط  مدرسيه ' class='dis-30'","400 " , 2 ,"   شنط  مدرسيه "]]
+
+
+// ملابس ولادي
+- var category_array_info1 = ["../images/games/g1.jpg" , "بلياتشو" ," 250 جنيه " , "200 جنيه" ]
+- var category_array_info2 = ["../images/games/g2.jpg" , " ميكي " ," 190 جنيه " , "114 جنيه" ]
+- var category_array_info3 = ["../images/games/g3.jpg" , " قالب جاتو" ," 300 جنيه " , "180 جنيه" ]
+- var category_array_info4 = ["../images/games/g4.jpg" , "  حقيبه أدوات الطبخ" ," 400 جنيه " , "280 جنيه" ]
+- var category_array_info5 = ["../images/games/g5.jpg" , "   لانش بوكس" ," 200 جنيه " , "140 جنيه" ]
+- var category_array_info6 = ["../images/games/g6.jpg" , "    مقلمه بناتي او ولادي" ," 100 جنيه " , "60 جنيه" ]
+- var category_array_info7 = ["../images/games/g7.jpg" , " ميكي " ," 190 جنيه " , "114 جنيه" ]
+- var category_array_info8 = ["../images/games/g8.jpg" , " قالب جاتو" ," 300 جنيه " , "180 جنيه" ]
+
++category_showInfo("games" , " العاب " , [category_array_info1 , category_array_info2 , category_array_info3 , category_array_info4, category_array_info5, category_array_info6, category_array_info7,category_array_info8] )
+
+
+// end show information of all kinds of ele categoriy
+
+
+
+include ../../footer/footer.pug
++scripts

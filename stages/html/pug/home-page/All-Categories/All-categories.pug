@@ -1,0 +1,171 @@
+
+// start function of carousel
+mixin mixIn_categories(page_title , carousel_item_1 , carousel_item_2 ,carousel ,carousel_icon , carousel_direction , product_discont )
+    .all-categories
+        .categories-header
+            h3(class= carousel_icon) #{page_title} 
+            a(href="") مشاهدة المزيد
+        .clearfix 
+        // start .Clothes-categories      
+        .categories
+            .container.categories-container
+                .carousel.slide(data-ride="id-"+carousel , class = "id-"+carousel , id='id-'+carousel)
+                    .carousel-inner
+                        // start first item of carousel 
+                        .carousel-item.active(class= "animation "+carousel_direction)
+                            // Our Gullery
+                            section.New_Arrivals
+                                .container
+                                    .row
+                                        // select all src and info of images from  carousel_item_1
+                                        each item in carousel_item_1
+                                            .col-lg-3.col-sm-6
+                                                .image
+                                                    <img #{item[0]} >
+                                                    .dicont
+                                                    .info
+                                                        p.lead #{item[3]}
+                                                        p.lead.before_Discount #{item[1]} 
+                                                        p.after_Discount  
+                                                        
+                                                        input(type="hidden" value="تفاصيل المنتج") 
+                                                        input(type="hidden" value="الوصف")  
+
+                                                        // start evaluate product 
+                                                        .evaluate_product
+                                                            -var i = item[2]
+                                                            case i
+                                                                when 1
+                                                                    i.fas.fa-star
+                                                                when 2
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                when 3
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                when 4
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                
+                                                        // end evaluate product
+                                                .display_info
+                                                    .info_content
+                                                        p.text-center  عرض المنتج 
+                                    .clearfix
+                        //  end item1 of carousel 
+                        .carousel-item(class= "animation "+carousel_direction)
+                            // Our Gullery
+                            section.New_Arrivals
+                                .container
+                                    .row
+                                        // select all src and info of images from  carousel_item_2
+                                        each item in carousel_item_2
+                                            .col-lg-3.col-sm-6
+                                                .image(class=product_discont)
+                                                    <img #{item[0]} >
+                                                    .dicont
+                                                    .info
+                                                        p.lead #{item[3]}
+                                                        p.lead.before_Discount #{item[1]} 
+                                                        p.after_Discount  
+                                                        
+                                                        input(type="hidden" value="تفاصيل المنتج") 
+                                                        input(type="hidden" value="الوصف")  
+                                                        // start evaluate product 
+                                                        .evaluate_product
+                                                            -var i = item[2]
+                                                            case i
+                                                                when 1
+                                                                    i.fas.fa-star
+                                                                when 2
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                when 3
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                when 4
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    i.fas.fa-star
+                                                                    
+
+                                                        // end evaluate product
+                                                .display_info
+                                                    .info_content
+                                                        p.text-center  عرض المنتج 
+                                    .clearfix
+                                //  end item1 of carousel 
+                    // start carousel control 
+                    
+                    a.carousel-control-prev(href= '#id-'+carousel , role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.sr-only Previous
+                    a.carousel-control-next(href='#id-'+carousel , role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.sr-only Next
+                    // end carousel control  
+                    ol.carousel-indicators
+                        li.active(data-target='#id-'+carousel , data-slide-to="0")
+                        li(data-target='#id-'+carousel , data-slide-to="1")
+// end function of carousel
+
+
+// start categories of clothes
+- var page_title = "جميع الملابس " ;
+
+- var carousel_item_1 =[["src='images/cloth/man/1.jpg'title= ' قميص رجالي'class='dis-30'","200 " ,3 ," قميص رجالي"] , ["src='images/cloth/man/815e11ce9ed6d99e74d06cf735925869.jpg' title= ' تيشيرت رجالي' class='dis-40'" , "100 " , 3 ," تيشيرت رجالي"] , ["src='images/cloth/man/pexels-photo-1103828.jpeg' title= ' طقم رياضي' class='dis-50'" , "850 " , 2 ,"  طقم رياضي"] , ["src='images/cloth/man/m4.jpg' title= ' تيشيرت اسود' class='dis-30'","180 " , 4 ,"  تيشيرت اسود"]]
+
+
+- var carousel_item_2 =[["src='images/cloth/women/w1.jpg'title= '  تيشيرت بناتي'class='dis-30'","200 " , 4 ,"   تيشيرت بناتي"] , ["src='images/cloth/women/w2.jpg' title= ' دريس ' class='dis-40'" , "250 " , 4 ,"  دريس"] , ["src='images/cloth/women/w3.jpg' title= '  هاي كول بناتي' class='dis-50'" , "150 " , 2 ,"  هاي كول بناتي "] , ["src='images/cloth/child/b1.jpg' title= '  فستان أطفالي' class='dis-30'","200 " ,4 ,"  فستان أطفالي"]]
+
+// mixIn_categories(page_title , carousel_item_1 ,carousel_item_2, name of carousel  , name of carousel icon , direction of carousel)
+
++mixIn_categories(page_title , carousel_item_1 ,carousel_item_2, "clothes-carousel" , "clothes-icon" , "left")
+
+.clearfix
+
+// end categories of clothes   
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// start categories of electronics
+- var page_title = " الكترونيات" ;
+
+- var carousel_item_1 =[ ["src='images/elec/tele/1.jpg' title= '  شاشه تلفزيون' class='dis-30'" , "30000 " , 3 ," شاشه تلفزيون "] , ["src='images/elec/lab/2.jpg' title= ' لاب توب (Apple)' class='dis-50'" , "50000 " , 2 ," لاب توب (Apple) "] , ["src='images/elec/lab/hp.jpg' title= ' لاب توب (hp)' class='dis-50'" , "25000 " , 2 ," لاب توب (hp) "], ["src='images/elec/lab/del.jpg' title= ' لاب توب (Del)' class='dis-50'" , "35000 " , 4 ," لاب توب (Del) "]]
+
+- var carousel_item_2 =[["src='images/elec/Mob/3.jpg' title= '  موبايل (Samasong)' class='dis-30'","2000 " , 3 ,"  موبايل (Samasong) "] , ["src='images/elec/Mob/mob2.jpg' title= ' موبايل (Oppo)' class='dis-30'","5000 " , 3 ,"  موبايل (Oppo)"], ["src='images/elec/Mob/mob3.jpg' title= '  موبايل (Relmi)' class='dis-30'","5000 " , 3 ,"  موبايل (Relmi)"], ["src='images/elec/elec0/4.jpg'title= '  سماعه ابل'class='dis-40'","800 " , 4 ," سماعه ابل "]]
+
+
+
+
++mixIn_categories(page_title , carousel_item_1 ,carousel_item_2,"ele-carousel" , "ele-icon" , "right")
+
+.clearfix
+
+// end categories of electronics
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// start categories of games
+- var page_title = "   العاب ومستلزمات الاطفال " ;
+
+- var carousel_item_1 =[["src='images/games/g1.jpg'title= '  بلياتشو 'class='dis-30'","250 " , 4 ,"  بلياتشو"] , ["src='images/games/g2.jpg' title= '  ميكي' class='dis-40'" , "190 " , 3 ," ميكي "] , ["src='images/games/g3.jpg' title= '  قالب جاتو' class='dis-40'" , "300 " , 4 ," قالب جاتو "] , ["src='images/games/g4.jpg' title= '  حقيبه أدوات الطبخ ' class='dis-30'","400 " , 2 ," حقيبه أدوات الطبخ "]]
+
+- var carousel_item_2 = [["src='images/games/g5.jpg'title= '  لانش بوكس  'class='dis-30'","200 " , 4 ,"  لانش بوكس "] , ["src='images/games/g6.jpg' title= '  مقلمه بناتي او ولادي' class='dis-40'" , "100 " , 3 ," مقلمه بناتي او ولادي "] , ["src='images/games/g7.jpg' title= '   شنطه ولانش بوكس ومقلمه' class='dis-50'" , "1500 " , 4 ,"  شنطه ولانش بوكس ومقلمه "] , ["src='images/games/g8.jpg' title= '    شنط  مدرسيه ' class='dis-30'","400 " , 2 ,"   شنط  مدرسيه "]]
+
++mixIn_categories(page_title , carousel_item_1 ,carousel_item_2,"games-carousel" , "games-icon" , "left")
+
+.clearfix
+
+// end categories of games
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,46 @@
+
+// start header-navbar
+include mixin_categories.pug 
++styleSheet_categories(" الالكترونيات")
++navbar_catecories
+// end header-navbar
+
+// start show kinds of electronic categoriy
+.All_Kind_category
+    .container
+        .row
+            +show-kinds-oneCategory("../images/elec/tele/1.jpg","شاشات كمبيوتر","first")
+            +show-kinds-oneCategory("../images/elec/lab/2.jpg"," لاب توب" , "second")
+            +show-kinds-oneCategory("../images/elec/Mob/3.jpg"," موبايلات" , "third")
+// end show kinds of electronic categoriy
+
+.clearfix
+
+div#intro
+
+
+- var category_array_info1 = ["../images/elec/tele/1.jpg" , "شاشات الكمبيوتر" ," 20000 جنيه " , "40 جنيه" ]
++category_showInfo("first" , "شاشات كمبيوتر" , [category_array_info1] )
+
+
+- var category_array_info2 = ["../images/elec/lab/2.jpg" , "لاب (apple)  " ," 50000 جنيه " , "25000 جنيه" ]
+- var category_array_info3 = ["../images/elec/lab/del.jpg" , "شاشات الكمبيوتر" ," 25000 جنيه " , "12500 جنيه" ]
+- var category_array_info4 = ["../images/elec/lab/hp.jpg" , "شاشات الكمبيوتر" ," 35000 جنيه " , "17500 جنيه" ]
+
++category_showInfo("second" , " لاب توب" , [category_array_info2 , category_array_info3 , category_array_info4 ] )
+
+
+- var category_array_info2 = ["../images/elec/Mob/3.jpg" , "موبايل (samsong)" ," 2000 جنيه " , "1400 جنيه" ]
+- var category_array_info3 = ["../images/elec/Mob/mob2.jpg" , "موبايل (Oppo) " ," 5000 جنيه " , "3500 جنيه" ]
+- var category_array_info4 = ["../images/elec/Mob/mob3.jpg" , "موبايل(Redmi) " ," 800 جنيه " , "480 جنيه" ]
+
++category_showInfo("third" , " موبايلات" , [ category_array_info2 , category_array_info3 , category_array_info4] )
+
+
+
+// end show information of all kinds of ele categoriy
+
+
+
+include ../../footer/footer.pug
++scripts

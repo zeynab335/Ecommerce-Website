@@ -1,0 +1,163 @@
+// start navbar_Admin_page
+mixin navbar_Admin_page
+    // start header intro => navbar                  
+    +header_search("login.html" , "register.html" , "../All_Categories/card.html")    
+    // end header intro => navbar  
+
+    // start header links
+    +header_links([["../All_Categories/header_All_Categori.html","جميع الفئات"],["../All_Categories/header_ele_categories.html"," الالكترونيات"],["../All_Categories/header_cloth_categories.html"," ملابس"],["../All_Categories/header_cloth_categories.html"," الالكترونيات"],['../index.html','رجوع للصفحة الرئيسية']])
+    // end header links
+// end navbar_Admin_page
+
+
+// start form of adding new address 
+
+mixin form_address(form_header , button_value , form_id)   
+    .form_address(class = form_id) 
+        form(action="")
+            hr
+            h4 #{form_header}
+            .form-row
+                // start name
+                .form-group.col-md-4
+                    label الإسم الاول*
+                    input.form-control.form_acion(type='text' required placeholder="الاسم الاول")
+                .form-group.col-md-4
+                    label أسم العائلة*
+                    input.form-control.form_acion(type='text' required placeholder="اسم العائله")
+                // end name    
+                
+                
+                // start address
+                .form-group.col-md-6
+                    label المحافظة*
+                    input.form-control.form_acion(type='text' required placeholder=" المحافظه")
+                .clearfix 
+                .form-row
+                    .form-group.col-md-4
+                        label المدينة*
+                        input.form-control.form_acion(type='text' required placeholder=" المدينة")
+                    .form-group.col-md-4
+                        label المنطقة* 
+                        select.form-control.form_acion
+                            option(selected='') اختار...
+                            option ...
+                    .form-group.col-md-2
+                        label رقم الشارع*
+                        input.form-control.form_acion(type='text' required placeholder="55")
+                    // end  address 
+
+                .clearfix
+                
+                // start phone number
+                .form-group.col-md-12
+                    label رقم الهاتف الجوال*
+                .clearfix    
+                .form-row
+                    .form-group.col-xs-3
+                        label: p.phone_num +20
+                    .form-group.col-xs-6
+                        input.form-control.form_acion(type='phone' required placeholder=" 01156819426")
+                // end phone number
+
+            button.btn.btn_form.btn-lg(type='button') #{button_value}
+            button.btn.btn_user_form_close(type="button" value=form_id)  رجوع
+
+        
+            
+
+// start  function of form_edit_account
+
+mixin form_edit_account   
+    .form_edit_account(id = "edit_accont") 
+        hr
+        h4 تعديل البيانات
+        form(action="password_confirm.html")
+            .form-row
+                .form-group.col-md-6
+                    input.form-control.form_acion(type='text' required placeholder="الأسم ")
+                .clearfix
+
+                .form-group.col-md-6
+                    input.form-control.form_acion(type='password' required placeholder="الباسورد")
+                .clearfix
+
+            button.btn.btn_form.btn-lg.btn-check-password(type='submit') تعديل
+            button.btn.btn_user_form_close(type="button" value="edit_accont")  رجوع
+
+// end  function of form_edit_account
+
+////////////////////////////////////////////////////////////////////////////
+
+//start  function of Add_info_of_product
+
+mixin Add_or_update_product(btn_name)
+    .form_Add_product(id = "Add_product") 
+        form(action="")
+            .form-row
+                .form-group.col-md-4
+                    label   اسم المنتج :
+                    input.form-control.form_acion(type='text' required placeholder="اسم المنتج ")
+                
+                .form-group.col-md-4
+                    label تحديد الفرع
+                    select.part_company.form_acion 
+                        option(value="1")
+                        option(value="2")
+                        option(value="3")
+            
+            .form-group.col-md-6
+                label  تفاصيل عن المنتج :
+                textarea.form-control.form_acion(rows='2' placeholder=" اكتب هنا...")
+            br
+            // start row of info of price             
+            .form-group.col-md-12  
+                label.form-contro-label   تفاصيل سعر المنتج : 
+            .form-row
+                .form-group.col-md-4
+                    input.form-control.form_acion(type='text' required placeholder=" سعر المنتج ")
+                .clearfix
+
+                .form-group.col-md-4
+                    input.form-control.form_acion(type='text' required placeholder=" خصم %20 ")
+                .clearfix
+            // end row of info of price    
+                
+            // start product status
+            br
+            
+            .form-row
+                //  product status
+                .form-group.col-md-4
+                    label حالة المنتج 
+                    select.part_company.form_acion 
+                        option(value="old")  سلعة قديمة 
+                        option(value="new") سلعة جديدة
+
+                // color of product
+                .form-group.col-md-4.form_color
+                    label.form-control-label اللون :
+                    input.form-control.form_acion(type='text' required placeholder=" لون المنتج")    
+            
+
+            .form-row
+                // delivery time
+                .form-group.col-md-4
+                    label.form-control-label مدة التوصيل :
+                    br
+                    select.select_delivery.form_acion
+                        option يوم 
+                        option يومين
+                        - for (var i = 3 ; i < 8; i++)
+                            option #{i} أيام       
+
+                // notes form seller
+                .form-group.col-md-4
+                    label.form-control-label ملاحظة البائع :
+                    input.form-control.form_acion(type='text' required placeholder="  ملاحظة البائع")
+                
+            button.btn.btn_form(type='button') #{btn_name}
+            button.btn.btn_user_form_close(type="button")  رجوع
+
+// end function of add_info_of_product
+

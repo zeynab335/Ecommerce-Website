@@ -1,0 +1,91 @@
+// start header-navbar
+include mixin_categories.pug 
++styleSheet_categories(" عرض المنتج")
++navbar_catecories
+// end header-navbar
+
+.show_Product_Div
+    .container-fluid
+        .row.show_Product_row
+            .col-lg-5.show_Product_col
+                .image 
+                    #show_Product_Carousel.carousel.slide(data-ride='carousel')
+                        .carousel-inner
+                            .carousel-item.active(data-interval=false)
+                                img.d-block.w-100(src='../images/cloth/Women/w1.jpg', alt='...')
+                            .carousel-item(data-interval=false)
+                                img.d-block.w-100(src='../images/cloth/Women/w2.jpg', alt='...')
+                            .carousel-item(data-interval=false)
+                                img.d-block.w-100(src='../images/cloth/Women/w3.jpg', alt='...')
+                        a.carousel-control-prev(href='#show_Product_Carousel', role='button', data-slide='prev')
+                            span.carousel-control-prev-icon(aria-hidden='true')
+                            span.sr-only Previous
+                        a.carousel-control-next(href='#show_Product_Carousel', role='button', data-slide='next')
+                            span.carousel-control-next-icon(aria-hidden='true')
+                            span.sr-only Next
+        
+                        ol.carousel-indicators
+                            li.active(data-target='#show_Product_Carousel', data-slide-to='0')
+                                img(src='../images/cloth/Women/w1.jpg', alt="")
+
+                            li(data-target='#show_Product_Carousel', data-slide-to='1')
+                                img(src='../images/cloth/Women/w2.jpg', alt="")
+
+                            li(data-target='#show_Product_Carousel', data-slide-to='2')
+                                img(src='../images/cloth/Women/w3.jpg', alt="")
+
+            .col-lg-4.show_Product_col
+                .product_name
+                    h2  تيشيرت بناتي
+                .product_by
+                    p بواسطة: بابل اون لاين 
+                
+                hr
+                .product_price
+                    h4 جنيه 200 
+                    .price_before: p  250 جنيه
+                
+                hr
+                .product_info
+                    h4 الوصف:
+                    ul
+                        li العلامة التجارية: بابل اون لاين
+                        li اللون: أبيض
+                        //li الحجم: 1192 * 1196 
+            // end col2
+
+            .col-lg.show_Product_col
+                .other_options
+                    h4 خيارات أخرى
+                    .color_option
+                        p الالوان المتاحة: 
+                        ul.list-unstyled
+                            li(data-value="black")
+                            li(data-value="#cb3434")
+                            li(data-value="#285545")
+                    hr
+                    .size_option
+                        p الحجم المتاح
+                        ul.list-unstyled
+                            li  XL
+                            li  L
+                            li MD
+                            li SM
+                .clearfix
+                .Add_product_toCart
+                    button.btn
+                        a(href="card.html") اضافة إلى المحفظة
+                hr
+                // info of seller
+                .seller_info
+                    p حالة السلعة : 
+                    p البائع : 
+                    p ملاحظة البائع : 
+
+
+
+.clearfix
+include ../../footer/footer.pug
+
++scripts
+

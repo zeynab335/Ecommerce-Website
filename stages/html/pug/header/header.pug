@@ -1,0 +1,85 @@
+include ../navbar.pug
+
+.header.no-slidebar
+    .container-fluid
+        include categories.pug
+        .header-content
+            // start header information
+            .header-infor
+                    .container-fluid
+                        ul.header-infor-list.list-unstyled
+                            .row
+                                // strat header information right
+                                .col-lg-6.col-md-4.col-xs.header-infor-right
+                                    .row
+                                        .col-sm
+                                            li(data-link = 'header_info_right_1')  الشحن المجاني
+                                            .clearfix
+                                            .link_hover.header_info_right_1
+                                                p يمكنك الحصول علي شحن مجاني عند شراؤك سلع بقيمة 350 جنية   
+                                        .col-sm
+                                            li(data-link = 'header_info_right_2') الدفع عند الاستلام
+                                            .clearfix
+                                            .link_hover.header_info_right_2  
+                                                p دفع المبلغ كامل عند استلام السلع المطلوبة
+
+                                        .col-sm
+                                            li(data-link = 'header_info_left_1') خدمة العملاء
+                                            .clearfix
+                                            .link_hover.header_info_left_1
+                                                p يمكنك الحصول علي شحن مجاني عند شراؤك سلع بقيمة 350 جنية   
+                                                
+                                    // end header information right
+                                .clearfix
+                                //.col-lg-2
+                                // start header information left
+                                .col-lg-6.col-md-8.col-xs.header-infor-left
+                                    .row
+                                        
+                                        .col-sm
+                                            li: a(href="Admin_Pages/register.html")  إنشاء حساب
+                                            .clearfix
+                                            
+                                        .col-sm
+                                            li: a(href="All_Categories/card.html")  تتبع مشترياتك
+                                            .clearfix
+                                        .col-sm
+                                            li: a(href="All_Categories/All_complaints.html")   تقديم شكوى
+                                            .clearfix    
+                                        
+                                // end header information left
+                                .clearfix 
+            // end header information   
+            .clearfix     
+
+            // start header intro => navbar                  
+            +header_search("Admin_Pages/login.html" , "Admin_Pages/register.html" , "All_Categories/card.html")    
+            // end header intro => navbar  
+
+            .clearfix                
+            // start header background        
+            .header-background
+                .img-header
+                    .img_div
+                        img(src="../images/—Pngtree—online shopping concept with man_5356758.png")
+                    .clearfix    
+
+                    // start button of sales_policy
+                    .header_btn
+                        button.btn.btn-sales_policy.animation.right(type=button)  أبدء البيع الآن !
+                    // end button of sales_policy
+
+            .clearfix        
+            // end header background
+            
+
+            // start header links
+            +header_links([["All_Categories/header_All_Categori.html","جميع الفئات"],["All_Categories/header_ele_categories.html"," الالكترونيات"],["All_Categories/header_cloth_categories.html"," جميع الملابس"],["All_Categories/header_games_categories.html"," الالعاب"]])
+            // end header links
+
+.clearfix         
+
+
+
+
+

@@ -1,0 +1,238 @@
+@import "../All-Categories/show-categories";
+
+/// start New_Arrivals
+.all-categories{
+    width: 100%;
+    padding-bottom: 25px;
+    // start header of categories
+    .categories-header{
+        margin: 2% 9% 1% 0;
+        width: 80%;
+        padding: 1%;
+        -webkit-box-shadow: 4px 5px 8px #9dc5b7;
+        box-shadow: 4px 5px 8px #9dc5b7;
+        /* background-color: #fff0f0; */
+        font: italic bold 20px $main-font;
+        color: #1d1d1d;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        > h3{
+            float: $floar-right;
+            font: italic bold 20px $main-font;
+            transition:  all 1s;
+            cursor: pointer;
+    
+            &:before{
+                font-family: "Font Awesome 5 Free";
+                content: "\f21b";
+                display: inline-block;
+                padding: 0 3px 0 10px;
+                vertical-align: middle;
+                font-weight: 600;
+            }
+            &.clothes-icon::before{content: "\f21b";}
+            &.ele-icon::before{content: "\f812";}
+    
+            &:hover{
+                padding-right: 4%;
+            }
+        }
+        a{
+            color: $main-color;
+            margin-left: 2%;
+            transition: all 0.5s;
+            &:after{
+                font-family: "Font Awesome 5 Free";
+                content: "\f060";
+                display: inline-block;
+                padding: 0 8px 0 10px;
+                vertical-align: middle;
+                font-weight: 600;
+            }
+            
+            &:hover{
+                text-decoration: none;
+                padding-left: 4%;
+            }
+    
+    
+        } // end header of categories
+    }
+    .categories{
+        color: $main-color;
+        float: right;
+        width: 100%;
+        //height: 55vh;
+        padding: 2% 0 2% 0;
+    
+        
+        // start container of Adevertis
+        .container{
+            height: 100%;
+            width: 100%;
+            
+            // start carousel of Advertiement
+            .carousel{
+                width: 100%;
+                height: 100%;
+                
+                //position: relative;
+                .carousel-inner{
+                    height: 100%;
+                    .carousel-item{
+                        height:100%;
+                        // start New_Arrivals
+                        .New_Arrivals{
+                            float: $floar-right;
+                            width: 100%;
+                            height: 100%;
+                            margin-bottom: 20px;
+                            
+                            .row{
+                                padding:2% 0 3% 0;
+                                height: 100%;
+                                div{
+                                    position: relative;
+                                    perspective: 200px;
+                                    height: 100%;
+                                    
+
+                                    .image {
+                                        width: 100%;
+                                        
+                                        img{
+                                            position: relative;
+                                            width: 100%;
+                                            height: 200px;
+                                            //padding-bottom: 12%;
+                                            cursor: pointer;
+                                        } // end  image
+
+                                        .dicont{
+                                            //content: '';
+                                            z-index: 1000;
+                                            position: absolute;
+                                            width: 20%;
+                                            height: 20%;
+                                            top: 0%;
+                                            left: 0%;
+                                            background-color: red;
+                                            border: 5px solid red;
+                                            color: white;
+                                            font-weight: bold;
+                                            font-weight: $main-font;
+                                            text-align: center;
+                                        }
+
+                                        // start info 
+                                        .info{
+                                            width: 100%;
+                                            float: $floar-right;
+                                            background-color: white;
+
+                                            
+                                            p{
+                                                padding-left: 10px;
+                                                text-align: right;
+                                                margin-bottom: 2px;
+                                                font:  bold 15px $main-font;
+                                                &.before_Discount{
+                                                    text-decoration: line-through;
+                                                    text-decoration-color: red;
+                                                }
+                                                &.after_Discount{
+                                                    color: $sec-color;
+                                                    //float: right;
+                                                }
+                                            }
+                                            
+                                            // start evaluate_product
+                                            .evaluate_product{
+                                                text-align: right;
+                                                cursor: pointer;
+                                                i{
+                                                    padding-right:3px ;
+                                                    &.fas.fa-star{
+                                                        color: #ffc107
+                                                    }
+                                                }
+                                            }
+                                            // end evaluate_product
+
+                                            
+
+                                        }
+                                    }    
+                                    // start info of image
+                                    .display_info{
+                                        display: none;
+                                        position: absolute;
+                                        perspective: 600px;
+                                        width: 90%;
+                                        height: 200px;
+                                        top: 0%;
+                                        right: 5%;
+                                        transition: all 0.5s;
+                                        
+                                        // start info_content of image
+                                        .info_content{
+                                            //display: none;
+                                            background-color: #00000080;
+                                            color: white;
+                                            cursor: pointer;
+                                            transition: all 5s;
+                                            p{
+                                                font-size: 25px;
+                                                font-family: $main-font;
+                                                padding-top: 30%;
+
+                                            }
+                                            
+                                        }
+                                        // end info_content of image
+                                    }
+                                    // end info of image
+    
+                                }// end col of New_Arrivals
+    
+                            }// end row of New_Arrivals
+                    
+                        }
+                        // end New_Arrivals
+
+                    } // end  carousel item
+                }//end carousel-inner
+            
+                .carousel-control-prev,
+                .carousel-control-next{
+                    background-color: black;
+                    opacity: 0.8;
+                    left: -5%;
+                    height: 10%;
+                    width: 5%;
+                    top: 30%;
+                }
+                .carousel-control-next{ right: -5%}
+                .carousel-indicators li {background-color: $main-color;}
+                // end carousel of Advertiement
+    
+            
+            }
+            // end categories
+            
+        } // end continer
+    }// end of categories
+} // end of all categories    
+
+
+
+
+
+
+
+
+
+
+
+
+

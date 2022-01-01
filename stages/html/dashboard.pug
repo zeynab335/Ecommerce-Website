@@ -1,0 +1,43 @@
+- var pageTitle = "Home Page";
+
+<!DOCTYPE html>
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Online Marketing
+        //- links of css
+        include pug/layout/styleSheet/links.pug
+    body
+        //include navbar.pug 
+        // start header intro => navbar                  
+        //+header_search("Admin_Pages/login.html" , "Admin_Pages/register.html" , "All_Categories/card.html")        
+        // end header intro => navbar
+
+        // start header of home page
+        include pug/header/header.pug
+        // end header of home page
+        
+        // start header links
+        //+header_links([["All_Categories/header_All_Categori.html","جميع الفئات"],["All_Categories\header_cloth_categories.html"," الالكترونيات"],["All_Categories/header_cloth_categories.html"," ملابس"]])
+        // end header links
+        // start adverstiements
+        include pug/home-page/advertisements.pug
+        // end adverstiements
+
+        // start All-Categories of clothes
+        include pug/home-page/All-Categories/All-categories.pug
+        // end All-Categories of clothes
+
+        // start footer 
+        include pug/footer/footer.pug
+        // end All-Categories of clothes
+
+        // start loading 
+        .loading#loading        
+            .text-center
+                .spinner-border(role="status")
+                    span.sr-only Loading...
+        // end loading 
+        
+    include pug/layout/scripts/scripts.pug

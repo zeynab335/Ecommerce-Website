@@ -1,0 +1,88 @@
+include mixin_categories.pug 
++styleSheet_categories(" الخطوة الأولى")
+
+.form_nav
+    .container
+        .form_col_nav
+            #step_one
+                span.step_one الشحن
+                p 1
+            #step_two
+                span.step_two الدفع
+                p 2
+                
+            #step_three
+                span.step_three تأكيد الدفع
+                p 3
+        hr
+
+.clearfix
+.form.charge
+    .container
+        p  الخطوة الأولى
+        .clearfix
+        
+        .row
+            // strat col 1
+            .col-lg-9.form_col
+                .form_col_header
+                    i.fas.fa-check-circle.form_col_header_icon
+                    span تفاصيل شراء المنتج
+                .clearfix    
+                hr
+                form(action="form2.html")
+                    .form-row
+                        // start name
+                        .form-group.col-md-6
+                            label(for='Name1') الإسم الاول*
+                            input#Name1.form-control.form_acion(type='text' required)
+                        .form-group.col-md-6
+                            label(for='Name2') أسم العائلة*
+                            input#Name2.form-control.form_acion(type='text' required)
+                        // end name    
+                    
+                    // start address
+                    .form-group
+                        label(for='address1') المحافظة*
+                        input#address1.form-control.form_acion(type='text' required)
+                    .clearfix 
+                    .form-row
+                        .form-group.col-md-6
+                            label(for='city') المدينة*
+                            input#city.form-control.form_acion(type='text' required)
+                        .form-group.col-md-4
+                            label(for='area') المنطقة* 
+                            select#inputState.form-control.form_acion
+                                option(selected='') اختار...
+                                option ...
+                        .form-group.col-md-2
+                            label(for='state_num') رقم الشارع*
+                            input#inputZip.form-control.form_acion(type='text' required)
+                        // end  address 
+                    .clearfix
+                    // start phone number
+                    .form-group
+                        label رقم الهاتف الجوال*
+                    .clearfix    
+                    .form-row
+                        .form-group.col-xs-3
+                            label.phone_num(for='phone_num'): p +20
+                        .form-group.col-xs-6
+                            input#phone_num.form-control.form_acion(type='phone' required)
+                    // end phone number
+                    .clearfix
+                    button.btn.btn_form.btn-lg.btn-block(type='submit')
+                        | احفظ وتابع
+            
+            // end col 1
+
+            .clearfix 
+            .col-lg.form_col.product_info.animation.left
+                div
+                    p عليك دفع مبلغ قدره
+                    p.sum  225 جنية
+
+
+
+script(src="../../js/jquery.js")
+script(src="../../js/Categories_js/form.js")

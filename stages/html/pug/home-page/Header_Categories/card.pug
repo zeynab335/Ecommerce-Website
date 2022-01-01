@@ -1,0 +1,65 @@
+// start header-navbar
+include mixin_categories.pug 
++styleSheet_categories("عربة التسوق")
++navbar_catecories
+// end header-navbar
+
+.card_info
+    .container-fluid
+        h2 عربة التسوق 
+        .clearfix
+        .row
+            .col-lg-2.card_col
+                .product_image
+                    img(src="../images/elec/tele/1.jpg", alt="")
+
+            .col-lg-6.card_col
+                .card_col_info
+                    h3 لاب توب
+
+                    .card_status
+                        p البائع: 
+                        p الحالة:
+                        p اللون :
+                    .clearfix    
+                    hr  
+                    .product
+                        .product_price
+                            p السعر
+                            br
+                            p.price 45 جنية
+                        .product_quantity 
+                            p الكمية 
+                            input(type="number" max="50" min="0" value="0")
+                    hr
+                    p.delete  
+                        i.far.fa-trash-alt
+                        | مسح المنتج من العربة   
+            .col-lg
+            .col-lg-3.last_card
+                .Delivery_time 
+                    p مدة التوصيل: 
+                    .clearfix
+                    hr
+                    p 3 أيام
+                .Shipping_cost 
+                    p تكلفة الشحن : 
+                    .clearfix
+                    hr
+                    p 25 جنيه 
+                .clearfix
+                    
+                .sum_price 
+                    p المجموع الكلي
+                    .clearfix
+                    hr
+                    p 225 جنيه 
+
+                button.btn.btn-block.card_button 
+                    a(href="form1.html") تابع عملية الشراء            
+                
+
+
+include ../../footer/footer.pug
+
++scripts

@@ -1,0 +1,632 @@
+@import "../../layout/variables";
+// start all categories css 
+.container{
+    .row{
+        float: $floar-right;
+        width: 100%;
+        h1{
+            text-align: center;
+            color: $sec-color;
+            width: 80%;
+            margin: 5%;
+            padding-bottom: 8px;
+            font-family: $main-font;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        .categori_content{
+            float: right;
+            width: 100%;
+            margin-bottom: 30px;
+            margin-bottom: 20PX;
+            h2{
+                float: right;
+                color: $sec-color;
+                font-family: $sec-color;
+                font-weight: 400;
+            }
+            .list-group{
+                float: right;
+                width: 100%;
+                button{
+                    text-align: right;
+                    a{
+                        color: $main-color;
+                        transition: all 0.5s ;
+                        &:hover{
+                            text-decoration: none;
+                            padding-right: 25px;
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: #72b69e;
+                    }
+                }
+            }
+        }
+        
+
+    }    
+}
+// end all categories css 
+
+
+//////////////////////////////////////////////////////////////
+
+// start ele category css
+.All_Kind_category{
+    float: $floar-right;
+    width: 100%;
+    margin: 35px 0 35px 0;
+    padding: 15px 0 15px 0;    
+    background-color: #f5f5f5;
+    
+    .show_kind-col{
+        float: $floar-right;
+        transition: all 0.5s;
+        margin: 7px;
+        padding: 0;
+
+        &:hover{
+            box-shadow: 5px 6px 8px #596b65;
+
+        }
+        .image_src{
+            img{
+                width: 100%;
+                height: 200px;
+                cursor: pointer;
+            }
+
+        }
+        h4{
+            text-align: center;
+            font-family: $main-font;
+            background-color: #285545;
+            color: white;
+            padding: 5px;
+            margin: 0;
+
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                padding-right: 35px;
+            }
+        }
+    }
+
+}
+
+
+// start show information of all kinds of ele categoriy
+.category_showInfo{
+    width: 100%;
+    float: $floar-right;
+    margin: 35px 0 35px 0;
+    //background-color: yellowgreen;
+    padding-bottom: 25px;
+
+    // strat category_showInfo_header
+    .category_showInfo_header{
+        width: 100%;
+        position: relative;
+        hr.right,hr.left{
+            width: 30%;
+            background-color: #285545;
+            display: inline-block;
+            position: absolute;
+        }
+        hr.right{right: 0;}
+        hr.left{left: 0;}
+        h2{
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            color: #285545;
+            font-family: $main-font;
+        }
+    }
+    // end category_showInfo_header
+
+    // strat category_showInfo_col
+    .category_showInfo_col{
+        margin: 25px 0 25px 0;
+        padding: 0;
+        &:hover{
+            box-shadow: 6px 4px 6px #596b65;
+            border-radius: 15px;
+        }
+
+        .category_showInfo_image{
+            transition: all 0.5s;
+
+            // start info of image
+            .show_product{
+                display: none;
+                position: absolute;
+                perspective: 600px;
+                width: 98%;
+                height: 300px;
+                top: 0%;
+                right: 0%;
+                border-radius: 5px;
+                transition: all 0.5s;
+                background-color: #00000095;
+                p{
+                    font-size: 25px;
+                    font-family: $main-font;
+                    padding-top: 35%;
+
+                    cursor: pointer;
+                    a{
+                        transition: all 0.5s;
+                        color: white;
+
+                        &:hover{
+                            text-decoration: none;
+                            padding-right: 35px;
+                        }
+                    }
+                }
+            }
+            // end info_content of image
+            img{
+                width: 100%;
+                height: 300px;
+                cursor: pointer;
+                transition: all 0.5s;
+                padding-left: 10px;
+                border-radius: 5px;
+                
+            }
+        }
+        // end info of image
+        
+        // start category_showInfo_information
+        .category_showInfo_information{
+            float: $floar-right;        
+            p{
+                float: $floar-right;
+                clear: both;
+                font-family: $main-font;
+                margin: 0;
+                padding: 10px 10px 0 10px;
+                &.before_Discount{
+                    text-decoration: line-through;
+                    text-decoration-color: #999;
+                }
+                &.after_Discount{
+                    font-weight: bold ;
+                    color: $sec-color;
+                }
+            }
+        }
+        // end category_showInfo_information
+
+        // start evaluate_product
+        .evaluate_product{
+            text-align: right;
+            cursor: pointer;
+            margin: 0 20px 20px 0; 
+            i{
+                padding-right:3px ;
+                &.fas.fa-star{
+                    color: #ffc107
+                }
+            }
+        }
+        // end evaluate_product
+
+        .category_showInfo_card{
+            float: $floar-right;
+            width: 98%;
+            background-color: $sec-color;
+            border-radius: 5px;
+            transition: all 0.5s;
+            //display: none;
+            a{
+                color: white;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &:hover{
+                background-color: $main-color;
+            }
+            button{
+                float: $floar-right;
+                width: 95%;
+                color: white;
+                font-family: $main-font;
+                font-size: 23px;
+            
+            }
+        }
+
+    }
+    // end category_showInfo_col
+    
+    &#first,&#second,&#third , &#forth{
+        display: none;
+    }
+}
+
+
+
+// end show information of all kinds of ele categoriy
+
+
+
+
+
+
+/////////////////////////////////////////////////
+
+// start show_Product_Div
+.show_Product_Div{
+    float: $floar-right;
+    width: 100%;
+    margin: 50px 0 50px 0;
+    .show_Product_row{
+        float: $floar-right;
+        width: 100%;
+        .show_Product_col{
+            float: $floar-right;
+            border-right: 2px solid #f1f1f1;
+            padding: 0;
+            //background-color: $sec-color;
+            .image{
+                float: $floar-right;
+                width: 100%;
+                height: 400px;
+                .carousel{
+                    width: 100%;
+                    height: 100%;
+                    
+                    //position: relative;
+                    .carousel-inner{
+                        height: 100%;
+                        .carousel-item{
+                            height:70%;
+                            img{
+                                height: 100%;
+                            }
+                
+                        }
+                    }
+
+                    .carousel-control-prev,
+                    .carousel-control-next{
+                        background-color: $sec-color;;
+                        opacity: 1;
+                        left: 5%;
+                        height: 10%;
+                        width: 8%;
+                        top: 80%;
+                    }
+                    .carousel-control-next{ right: 5%}
+                    .carousel-indicators{
+                    
+                        padding-inline-start: 0;
+                        li {
+                            opacity: 1;
+                            height: 80px;
+                            width: 70%;
+                            background: none;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                transition: all 0.5s;
+                                &:hover{
+                                    border: 1px solid $main-color;
+                                }
+                                &.image_border{
+                                    border: 2px solid $sec-color; 
+                                }
+                            }
+                        }   
+                        
+                            
+
+                    }
+                }
+            }    
+            > div{
+                width: 100%;
+                float: right;
+                p,h2,h4,ul{
+                    float: $floar-right;
+                    clear: both;
+                    font-family: $main-font;
+                    padding: 2px 15px 2px 15px;
+                    color: $sec-color;
+                    margin: 2px;
+                }
+                p{color: $main-color; font-weight: 100px;}
+                
+                &.product_price{
+                    .price_before{
+                        p{
+                            text-decoration: line-through;
+                            text-decoration-color: red;
+                        }
+                    }
+                }
+
+                &.product_info{
+                    ul{
+                        margin-right: 50px;
+                        li{
+                            padding-right: 5px;
+                            float: $floar-right;
+                            clear: both;
+                        }
+                    }
+                }
+
+                &.other_options{
+                    .color_option{
+                        li{
+                            width: 25px;
+                            height: 25px;
+                            display: inline-block;
+                            margin-right: 2px;
+                            border-radius: 50%;
+
+                        }
+                    }
+                    .size_option{
+                        li{
+                            border: 1px solid $sec-color;
+                            margin: 0;
+                            width: 50px;
+                            text-align: center;
+                            display: inline-block;
+                            transition: all 0.5s;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: $sec-color;
+                                color: white;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .Add_product_toCart{
+                button{
+                    width: 100%;
+                    margin: 15px 0 5px 0;
+                    padding: 5px;
+                    background-color: $sec-color;
+                    border-radius: 0;
+                    transition: all 0.5s;
+                    cursor: pointer;
+
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                    
+                    
+
+                    &:hover{
+                        background-color: $main-color;
+                        padding-right: 30px;
+                    }
+                    
+                }
+            }
+            hr{
+                display: inline-block;
+                width: 100%;
+                background-color: #fdfeff;
+            }
+            
+        }
+    }
+
+}
+
+
+// end show_Product_Div
+
+
+
+// strat card_info
+
+.card_info{
+    width: 100%;
+    float: $floar-right;
+    margin: 35px 0 35px 0;
+    padding-right: 25px;
+    h2{
+        float: $floar-right;
+        margin-bottom: 25px;
+        color: $font-color
+
+    }
+    .card_col{
+        float: $floar-right;
+        background-color: #fafafa;
+        padding: 25px;
+        .product_image{
+            img{
+                width: 200px;
+                float: $floar-right;
+                height: 100px;
+            }
+        }
+        
+        h3,p,input{
+            float: $floar-right;
+            margin: 2px;
+            color: $font-color;
+        }
+        h3{
+            margin-bottom: 25px;
+        }
+        hr{
+            display: block;
+            width: 100%;
+            
+        }
+        .card_status{
+            p{
+                clear: both;
+            }
+        }
+        .product{
+            width: 100%;
+            display: flex;
+            
+            .product_price{
+                width: 50%;
+                float: right;
+                p{
+                    clear: both;
+                    font-weight: bold;
+                    &:nth-child(3){
+                        border: 1px solid #d1d1d1;
+                        padding: 6px;
+                        background-color: white;
+                    }
+                }
+            }
+            .product_quantity{
+                float: left;
+                width: 60%;
+                border-right: 2px solid #0000001a;
+                padding-right: 20%;
+                font-weight: bold;
+
+                input{
+                    clear: both;
+                    text-align: center;
+                }
+            }
+        }
+        // end product
+
+        .delete{
+            background-color: $sec-color;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.5s;
+            &:hover{
+                background-color: #d91010;
+            }
+            .fa-trash-alt{
+                padding-left: 8px;
+            }
+        }
+        
+    }
+    .last_card{   
+        padding: 0;
+        margin-left: 30px;
+        > div{
+            text-align: right;
+            margin-bottom: 10px;
+            &:last-of-type{
+                margin-bottom: 0;
+                background-color: #fafafa;
+
+            }
+            &.Delivery_time{
+                float: left;
+                width: 47%;
+                background-color: #fafafa;
+
+                
+
+            }
+            &.Shipping_cost{
+                float: right;
+                width: 47%;
+                background-color: #fafafa;
+
+            }
+            p{
+                padding: 5px 30px 10px 5px;
+                font-weight: bold;
+                margin-bottom: 0;
+                &:first-of-type{
+                    color: $font-color;
+                    margin-bottom: 0.3rem;
+                }
+            }
+            hr{
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+
+            
+        }
+
+        button{
+            background-color: $sec-color;
+            width: 100%;
+            padding: 10px;
+            border-radius: 0;
+            transition:  all 0.5s;
+            a{
+                color: white;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &:hover{
+                background-color: $main-color;
+            }
+        }
+        
+    }
+}
+
+// end card_info
+
+
+///////////////////////////////////////////////////////
+
+
+
+//start All_complaints page
+
+.All_complaints{
+    text-align: right;
+    margin: 50px 35px 50px 35px;
+
+    .form_All_complaints{
+        text-align: right;
+        margin-top: 60px;
+
+        #date_of_complaint{
+            text-align: right;
+        }
+
+        .btn-complaint{
+            background-color: $sec-color;
+            color: white;
+            border-radius: 0;
+            padding:5px;
+            font-family: $main-font;
+            font-size: 20px;
+            &:hover{
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+
+
+
+//end All_complaints page

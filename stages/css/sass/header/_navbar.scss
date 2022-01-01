@@ -1,0 +1,305 @@
+.header-intro {
+    width: 95%;
+    margin-right: 3%;
+    text-align: right;
+    .header-img{
+        float: right;
+        //margin-right: 5%;
+        img{
+            width: 120px;
+            height: 90px;
+            float: right;
+            margin-right: 25px;
+        }
+    }
+    .header-search{
+        padding-top: 4%;
+        position: relative;
+
+        .input-search{
+            width: 88.5%;
+            float: $floar-right;
+            padding-bottom: 0;
+        }
+        .form-control{
+            font-family: $main-font;
+        }
+        .btn-search{
+            font-family: $main-font;
+            float: left;
+            position: absolute;
+            left: 10%;
+            .fa-search{
+                padding-top: 3px;
+                padding-bottom: 5px;
+            }
+            
+        }
+    }
+    
+    // start user info
+    .user-info{
+        text-align: center;
+        font-family: $main-font;
+        margin-top: 3%;
+        float: $floar-right;
+        width: 65%;
+        position: relative;
+        .fa-user-circle{
+            color: $main-color
+        }
+        .h4{
+            color: #1d1d1d;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover{
+            padding-left: 10%;
+            
+            }
+        }
+
+        // strat login-info
+        .login-info{
+            font-family: $main-font;
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: .255em;
+                vertical-align: .255em;
+                content: "";
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                border-left: .3em solid transparent;
+            }
+            
+            // start login-toggle
+            .login-toggle,.dropdown-menu{
+                padding: 0;
+                float: $floar-right;
+                position: absolute;
+                left: 29px !important;
+                top: 100% !important;
+
+                a{
+                    color: $font-color;
+                    &:hover{
+                        background: none;
+                        
+                    }
+                }
+                .dropdown-item{
+                    padding: 0px 0 5px 0 ;
+                    text-align: center;
+                
+                    span{
+                        color: $font-color;
+                        transition: all 0.3s;
+                        &:hover{
+                            padding-right: 20px;
+                        }
+                    }
+                }
+                .login-button{
+                    background-color: $sec-color;
+                    width: 100%;
+                    transition: all 0.5s;
+                    a{
+                        color: white;
+                        &:hover{
+                            background: none;
+                            
+                        }
+                    }
+                    &:hover{
+                        background-color: $main-color;
+                    }
+                }
+    
+            }// end  login-toggle
+            
+        }// end login-info           
+    } // end of user info
+
+     // start user cart
+    .user-cart{
+        float: $floar-left;
+        margin-top: 5%;
+        width: 35%;
+        position: relative;
+
+        .card_intro{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            padding: 6px;
+            padding-top: 0;
+            text-align: center;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+        }
+        a{
+            font-family: $main-font;
+            color: $main-color;
+            transition: all 0.5s;
+            &:hover{
+                text-decoration: none;
+                padding-left: 10%;
+            }
+        }
+        h4{
+            transition: all 0.5s;
+            &:hover{padding-left: 15%;}
+
+        }
+    } // end of user cart
+    
+} // end header-intro
+
+
+
+
+ // start header links
+        .header-links,
+        .header-infor{
+            background-color: #285545;
+            float: right;
+            width:100%;
+            .header-infor-right,.header-infor-left{
+                width: 50%;
+                float: $floar-right;
+                text-align: right;
+                .row{
+                    height: 7vh;
+                    text-align: right;
+                    
+                }
+                
+            }
+            
+            .header-infor-left{float: $floar-left;}
+            ul{
+                width: 98%;
+                margin: 0%;
+                margin: 4px 0 4px 0;
+                text-align: right;
+                position: relative;
+                
+                // start list of links
+
+                li{
+                    float: right;
+                    font-size: $main-font;
+                    color: white;
+                    transition: all 0.5s;
+                    padding: 10px 0 15px 0;
+                    cursor: pointer;
+                    margin-bottom: 2px;
+                    
+                    // a of header licks
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: none;
+                            padding-right:5px;
+                            
+                        }
+                    }
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        transform: translateY(60%);
+                        right: 0;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        padding-right:20px;
+                        
+                    }
+                }
+                // end list of links
+
+                .link_hover{
+                    position: relative;
+                    background-color: #2c2c2c;
+                    margin-bottom: 2px;
+                    z-index: 1000;
+                    padding: 6px;
+                    /*opacity: 0.8;
+                    */-webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                    display: none;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: -15%;
+                        right:25%;
+                        //z-index: 1000;
+                        border-width : 10px ;
+                        border-color: transparent transparent white transparent;
+                        border-style : solid;
+                        
+                    }
+
+                    p{
+                        color: $main-color;
+                        padding: 6px;
+                        position: relative;
+                        color: white;
+                        
+                    }
+                
+                    
+
+            }
+            }
+            
+
+            
+        }
+        // end header links
+
+
+        @media (max-width:575px){
+            
+
+            .header-intro .header-img img {
+                width: 130px;
+                height: 100px;
+                float: right;
+                margin-right: 35px;
+            }
+            // strat card intro 
+            .header-intro .user-cart .card_intro {
+                right: 60px;
+            }
+            // end card intro 
+
+            .header-infor-right,.header-infor-left{
+                .row{
+                    height: 15vh !important;
+                    margin: 5px 0 5px 0;
+
+                }
+            }
+        }
+
+        @media (max-width:757px){
+            .header{
+                .header-background{
+                    background: none;
+                }
+            }
+            .header-intro .user-cart .card_intro{
+                right: 35%;
+            }
+            
+        }

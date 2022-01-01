@@ -1,0 +1,25 @@
+// only for write imports 
+
+// import layout of scss
+@import "sass/layout/layout";
+@import 'sass/layout/variables';
+@import 'sass/layout/annimations';
+
+// import loading of scss
+@import 'sass/layout/loading';
+
+// import header of scss
+@import 'sass/header/header';
+
+// import categories of scss
+@import 'sass/header/categories';
+
+// import advertisements of scss
+@import 'sass/home-page/advertisements';
+
+// import footer of scss
+@import 'sass/footer/Footer';
+
+// import clothes of scss
+@import 'sass/home-page/All-Categories/All-categories';
+

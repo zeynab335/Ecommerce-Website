@@ -1,0 +1,62 @@
+include ../home-page/Header_Categories/mixin_categories.pug
+
++styleSheet_categories("تسجيل الدخول")
+
+include mixin_admin_page.pug
++navbar_Admin_page
+
+.clearfix
+
+
+.login_page
+    .container
+        h3 تسجيل الدخول
+        .login_container
+            .login_form.text-center
+                form(action='user_page.html')
+                    .form-group
+                        input#username_login.form-control.form_acion(type='text', placeholder='البريد الالكتروني', required)
+                    .clearfix  
+                    
+                    .form-group
+                        input#password_login.form-control.form_acion(type='password', placeholder=' الرقم السري', required)
+                    .clearfix  
+                    
+                    // button of login
+                    button.btn.btn_form.btn-lg.btn-block(type='submit') تسجيل الدخول
+                    
+                    // button of login eith gmail
+                    button.btn.btn-lg.btn-block.btn_form_gmail.btn_form(type="button")
+                        i.fas.fa-envelope
+                        | تسجيل الدخول عبر الايميل
+
+
+// start  login_page_gmail
+
+#login_page_gmail.login_page_gmail
+    .login_container.animation.left
+            .exit_login_page X
+            h3 تسجيل الدخول بواسطة الايميل
+            .login_form.text-center
+                form(action='user_page.html')
+                    .form-group
+                        input#username_gmail.form-control.form_acion(type='text', placeholder='البريد الالكتروني', required)
+                    .clearfix  
+                    
+                    .form-group
+                        input#password_gmail.form-control.form_acion(type='password', placeholder=' الرقم السري', required)
+                    .clearfix  
+                    
+                    // button of login
+                    button.btn.btn-lg.btn-block.btn_gmail.btn_form(type='submit')
+                        | تسجيل الدخول                    
+// end  login_page_gmail
+
++scripts
+script(src='../../js/admin_pages/login.js')
+
+
+
+
+
+

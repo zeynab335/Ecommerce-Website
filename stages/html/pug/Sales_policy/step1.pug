@@ -1,0 +1,64 @@
+include ../home-page\Header_Categories\mixin_categories.pug 
++styleSheet_categories(" شروط البيع ")
+link(rel="stylesheet", href="../../css/Sales_policy/All_Steps_sales.css")
+
+.form_nav
+    .container
+        .form_col_nav
+            #step_one.active_step
+                span.step_one شروط البيع
+                p 1
+            #step_two
+                span.step_two تفاصيل المتجر
+                p 2
+        hr
+
+.clearfix
+.form.step1_page
+    .container
+        p  الخطوة الأولى
+        .clearfix
+        
+        .row
+            // strat col 1
+            .col-lg-9.form_col
+                .form_col_header
+                    i.fas.fa-check-circle.form_col_header_icon.active_step
+                    span تفاصيل شروط البيع
+                .clearfix    
+                hr
+                p.lead.info_sales  الشرط الأول : هو ان يتم  ------
+                p.lead.info_sales الشرط الثاني : هو ان يتم  ------
+                p.lead.info_sales الشرط الثالث : هو ان يتم  ------
+                .clearfix
+                    
+                    
+                form(action="step2.html")
+        
+                    // start confirom this step
+                    .form-group
+                        input.sales_checkbox(type='checkbox' required)
+                        label.sales_label   تأكيد الشروط
+
+                    .clearfix 
+                    // end confirom this step
+
+                    // start name of product 
+                    label المنتج المراد بيعه :
+                    .clearfix
+                    .form-group
+                        select
+                            option(value="") الكترونيات
+                            option(value="")
+                            option(value="")
+                    .clearfix
+
+                    // end name of product 
+                    button.btn.btn_form.btn-lg.btn-block(type='submit')
+                        | احفظ وتابع
+            
+            // end col 1
+
+
+script(src="../../js/jquery.js")
+script(src="../../js/Categories_js/form.js")

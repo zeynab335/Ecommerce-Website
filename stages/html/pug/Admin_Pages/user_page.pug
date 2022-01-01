@@ -1,0 +1,239 @@
+include ../home-page/Header_Categories/mixin_categories.pug
+
++styleSheet_categories(" حسابك الخاص")
+link(rel="stylesheet", href="../../css/Admin_Pages/Admin.css")
+
+include mixin_admin_page.pug
++navbar_Admin_page
+
+.clearfix
+.user_page
+    .container-fluid
+        .row.text-lg-right
+            // strat user information
+            .col-lg-4.user_info
+                // start user info  
+                .user_info_header
+                    i.user-icon.fas.fa-user.fa-2x
+                    span.user_name Zeynab
+                    br
+                    span.user_gmail zeze@gmail.com
+                // end user info   
+
+                // strat user accont
+                .user_info_accont
+                    .All_product
+                        i.fas.fa-shopping-basket
+                        span جميع المشتريات
+                    hr
+                    .user_Addresses
+                        i.fas.fa-map-marked-alt
+                        span عناوين الشحن
+                    hr
+                    .accont_setting
+                        i.fas.fa-user-edit
+                        span إعدادات الحساب
+                    
+                    hr
+                    .show_admin_products
+                        i.fab.fa-shopify
+                        span  عرض جميع الاعلانات  
+
+                    hr
+                    .seller_form
+                        i.fab.fa-product-hunt
+                        span  إضافة منتج جديد   
+                    
+                    
+                    // end user accont
+
+            // end user information
+            
+            .clearfix
+
+            // start all pages of user
+            .col-lg.text-lg-right.user_pages
+                .All_product_page
+                    .product_page_header
+                        h3 جميع المشتريات
+                        hr
+                        p.no_of_prodeucts عدد المشتريات الموجودة ( 1 ) 
+                    .product_info
+                        .row
+                            .col-lg-3.card_col
+                                .product_image
+                                    img(src="../images/cloth/1.jpg", alt="")
+
+                            .col-lg-6.card_col
+                                .card_col_info
+                                    h4  قميص بجيب امامي كبير - ابيض
+                                    
+                                .card_status
+                                    p البائع : online marketing
+                                    p الحالة :  جديدة
+                                    p اللون  :  ابيض
+                                    p السعر  :  250 جنيه
+                                .clearfix  
+                    hr
+                    .product_info
+                        .row
+                            .col-lg-3.card_col
+                                .product_image
+                                    img(src="../images/cloth/1.jpg", alt="")
+
+                            .col-lg-6.card_col
+                                .card_col_info
+                                    h4  قميص بجيب امامي كبير - ابيض
+                                    
+                                .card_status
+                                    p البائع : online marketing
+                                    p الحالة :  جديدة
+                                    p اللون  :  ابيض
+                                    p السعر  :  250 جنيه
+                                .clearfix                
+
+                // end all product page                
+
+                ////////////////////////////////////////////////////////////////////////////
+
+                // strat user_Addresses_page
+                .user_Addresses_page
+                    .user_Addresses_header
+                        h3  عناوين الشحن
+                        hr
+                        p.no_of_prodeucts عدد العنواين الموجودة ( 2 )
+                        .add_address_button
+                            button.btn.btn_user_form(type="button" value="add")  إضافة عنوان
+                    
+                    
+                    .user_Addresses_content
+                        p.user_name Mahmoud Anwer
+                        p.address   القاهره, مصر
+                        .edit_button
+                            button.btn.form_addrs_edit(type="button") تعديل البيانات
+                        
+                        // start form of edit address information    
+                        +form_address("  تعديل البيانات" , "تعديل" , "edit")  
+                        // end form of edit address information                 
+
+                    .user_Addresses_content
+                        p.user_name zeynab Mahmoud
+                        p.address   القاهره, مصر
+                        .edit_button
+                            button.btn.form_addrs_edit(type="button") تعديل البيانات
+                        
+                        // start form of edit address information    
+                        +form_address("  تعديل البيانات" , "تعديل" , "edit")  
+                        // end form of edit address information    
+                        
+                    // start form of adding new address    
+                    +form_address("اضافة عنوان جديد" , "إضافة" , "add")  
+                    // end form of adding new address
+
+
+
+                ////////////////////////////////////////////////////////////////////////////
+                // strat accont_setting_page
+
+                // strat accont_setting_page
+                .accont_setting_page
+                    .accont_setting_header
+                        h3    إعدادات الحساب
+                        hr
+                    .clearfix    
+                    .accont_setting_content
+                        p.name الاسم = zeynab
+                        p.password الباسورد = *****
+
+                        p.email الإيميل = zeynab@gmail.com
+                        .edit_button
+                            button.btn.btn-update-email(type="button")  تعديل الايميل 
+                        .clearfix
+                        
+                    // strat function of edit accont
+                    +form_edit_account   
+                    // end function of edit accont
+
+                // end accont_setting_page
+
+
+
+                // end accont_setting_page
+                ////////////////////////////////////////////////////////////////////////////
+
+                // start seller_page
+                .seller_form_page
+                    .seller_form_header
+                        h3     إضافة منتج جديد 
+                    +Add_or_update_product("أضافة")
+                // end seller_page
+
+                ////////////////////////////////////////////////////////////
+
+
+                // start show_all_product
+                .show_admin_products_page
+                    .show_all_product_header
+                        h3  عرض جميع الاعلانات (2)
+                    
+                    .row
+                        // start show all info of one product
+                        .col-lg-8
+                            .show_product  
+                                .show_image
+                                    img(src="../images/cloth/1.jpg", alt="")
+                                
+                                .show_info     
+                                    h4 اسم المنتج : قميص
+                                    hr
+                                    p تفاصيل المنتج: تشيرت أبيض 
+                                    p سعر المنتج : 200 جنيه
+                                    p خصم :  25%
+                                    p حالة السلعة: جديدة
+                                    p اللون : أبيض 
+                                    p ملاحظة البائع : عرض المنتج خلال 5 أيام فقط
+                                
+                                .action_of_product
+                                    .row
+                                        .col-sm
+                                            button.btn.btn_form.btn-lg.btn-block.edit_product.btn_all_product(type='button') تعديل المنتج    
+                                        .col-sm
+                                            button.btn.btn_form.btn-lg.btn-block.delete_product(type='button') حذف المنتج    
+                        // end show all info of one product
+                        .col-lg
+
+                        // start show-views of this product
+                        .col-lg-3.animation.left
+                            .show_views
+                                p  عدد مشاهدات 
+                                hr
+                                p  10
+
+                            .show_no_quantity
+                                p عدد الطلبات  
+                                hr
+                                p  3
+                                button.btn.btn-block.btn-view-quantity(type='button'): a(href="All_Requirements.html") عرض جميع الطلبات
+                        // end show-views of this product
+
+
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // start update in show all product
+                .update_product
+                    +Add_or_update_product("تعديل")
+
+                // end update in show all product
+                ///////////////////////////////////////////////////////////////////////////////////////
+
+            // end show_all_product
+
+
+            // end all pages of user
+
+
+
+
+
+// include scripts function
++scripts
+script(src='../../js/admin_pages/user_page.js')  

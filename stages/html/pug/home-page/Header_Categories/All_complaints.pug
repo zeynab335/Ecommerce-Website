@@ -1,0 +1,44 @@
+// start header-navbar
+include mixin_categories.pug 
++styleSheet_categories(" تقديم شكوى")
+// end header-navbar
+
+
+
+// start All_complaints page
+
+.All_complaints
+    .container
+        .intro
+            h4 نحن هنا لمعرفة مشكلتك ومساعدتك !
+            p من فضلك، قم بملئ الفورم التي امامك لنساعدك في حل المشكلة.
+        
+        hr
+        
+        // strat form of All_complaints
+        form.form_All_complaints(action="")
+            .form-group.col-md-4
+                label(for='email_of_complaint')   الايميل :
+                input#email_of_complaint.form-control.form_acion(type='email' required placeholder="الإيميل ")
+            br
+
+            .form-group.col-md-4
+                label(for='date_of_complaint')   تاريخ ملئ الفورم :
+                input#date_of_complaint.form-control.form_acion(type='date' required)
+            br
+            
+            .form-group.col-md-6
+                label(for='info_complaint')   تفاصيل الشكوي  :
+                textarea#info_complaint.form-control.form_acion(rows='4' placeholder=" اكتب هنا... ")
+            br
+
+            button.btn.btn-block.btn-complaint(type='submit') تقديم الشكوى
+
+        
+        // end form of All_complaints
+
+// end All_complaints page
+
+
+
++scripts    

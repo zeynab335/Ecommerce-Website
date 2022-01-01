@@ -1,0 +1,41 @@
+include ../home-page/Header_Categories/mixin_categories.pug
+
++styleSheet_categories("إنشاء حساب")
+link(rel="stylesheet", href="../../css/Admin_Pages/login.css")
+
+include mixin_admin_page.pug
++navbar_Admin_page
+
+.clearfix
+.register_page
+    .container
+        h3  إنشاء حساب
+        .register_container
+            .login_form.text-center
+                form(action='user_page.html')
+                    .form-group
+                        input#username_register.form-control.form_acion(type='text', placeholder=' الاسم', required)
+                    .clearfix 
+
+                    .form-group
+                        input#email_register.form-control.form_acion(type='email', placeholder='البريد الالكتروني', required)
+                    .clearfix 
+                    
+                    .form-group
+                        input#password_register.form-control.form_acion(type='password', placeholder=' الرقم السري' , required)
+                        p.password_paraghar.text-center كلمة السر يجب ألا تقل عن ستة أحرف ! 
+                    .clearfix  
+
+                    .form-group
+                        input#confirm_password_register.form-control.form_acion(type='password', placeholder='  اعد كتابة الرقم السري ' , required)
+                        p.confirm_password_paraghar.text-center كلمة السر غير متطابقة
+                        p.unconfirm_password_paraghar.text-center  كلمة السر متطابقة
+                    
+                    // button of login
+                    button.btn.btn_form.btn-lg.btn-block(type='submit')  إنشاء الحساب
+
+
+// include scripts function
++scripts
+script(src='../../js/admin_pages/register.js')  
+

@@ -1,0 +1,183 @@
+
+
+.header{
+
+    .slide-bar{
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color:$main-color;
+        transition: 0.5s;
+        z-index: 1200;
+        
+        .toggle-icon{
+            position: absolute;
+            left: -12%;
+            top: 2%;
+            transform: translateY(180%);
+            cursor: pointer;
+            z-index: 1000;
+            color: $main-color;
+            &:hover{
+                color: $sec-color;
+            }
+
+        }
+        .slidebar-content{
+            color: hsl(0, 0%, 100%);
+            font-family: $main-font;
+            width: 100%;
+            height: 100%;
+            padding: 3%;
+            float: $floar-right;
+            .h4{
+                //background-color: white;
+                padding: 2%;
+                float: $floar-right;
+                width: 100%;
+                border-bottom: 1px solid #535353;
+
+                a{
+                    float: $floar-right;
+                    font-size: 20px;    
+                    color: white;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        text-decoration: none;
+                        padding-right: 15px;
+                    }
+
+
+                }
+            }
+
+            .slidebar-categories{
+                width: 100%;
+                //height: 20%;
+                float: $floar-right;
+                margin-top: 5%;
+
+                // start row
+                .row{
+                    margin-bottom: 5%;
+
+                    .categories-header{
+                        position: relative;
+
+                        .h5{
+                            float: $floar-right;
+                            padding-right: 12%;
+                            cursor: pointer;
+                            transition: all 0.3s;
+
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                width: 10px;
+                                height: 10px;
+                                top: 14%;
+                                right: 9%;
+                                border: 2px solid white;
+                                border-radius: 50%;
+                            }
+                            &:hover{
+                                padding-right: 20%;
+                            }
+                            a{
+                                color: white;
+                                text-decoration: none;
+                                &:hover{text-decoration: none;}
+                            }
+                        }
+                    }
+
+                    .categories-toggle{
+                        width: 42%;
+                        float: left;
+                        cursor: pointer;
+                    }
+
+                } // end of row
+
+                 // all categories-content
+                .categories-content{
+                    height: 100%;
+                    float: right;
+                    width: 100%;
+                    display: none;
+                    ul{
+                        float: $floar-right;
+                        position: relative;
+                        
+                        
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 100%;
+                            background-color: $sec-color;
+                            top: 0;
+                            right: 40px;
+                        }
+
+                        li{
+                            position: relative;
+                            width: 100%;
+                            height: 30px;
+                            padding: 0;
+                            padding-bottom: 5%;
+                            
+                            cursor: pointer;
+                            &:hover:before{
+                                content: "";
+                                position: absolute;
+                                width: 2px;
+                                height: 100%;
+                                background-color: white;
+                                top: 0;
+                                right: 0%;
+                            }
+
+                            a{
+                                float: $floar-right;
+                                text-decoration: none;
+                                padding-right: 15px;
+                                color: #9faea9;
+                                transition: all 0.5s;
+
+                                &:hover{
+                                    padding-right: 10px ;
+                                    color: white;
+                                }
+                            }
+                            
+
+                        }
+                        
+                        
+                    
+                    }
+                } // end categories-content
+                
+            } // end slidebar-categories
+            
+            
+        }
+        &.no-slidebar{
+            right: -400px;
+            .toggle-icon{
+                left: -46%;
+                top: 4%;
+            }
+        }
+    }
+}
+
+@media(max-width: 992px){
+.header .slide-bar.no-slidebar .toggle-icon {
+    display: none;
+}
+}

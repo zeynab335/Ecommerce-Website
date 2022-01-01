@@ -1,0 +1,32 @@
+html
+    // start header-navbar
+    include mixin_categories.pug 
+    +styleSheet_categories("جميع الفئات")
+    +navbar_catecories
+    // end header-navbar
+    mixin content-of-categories(name_of_categories , content_categorie)
+        .col-lg-6.categori_content
+            h2 #{name_of_categories}
+            .clearfix
+            .list-group
+                each item in content_categorie
+                    button.list-group-item.list-group-item-action(type='button')
+                        a.categorie_button(href=item[0] class=item[1]) #{item[2]}
+            .clearfix            
+        .clearfix
+
+    .all_categories
+        .container.categori_container
+            .row
+                h1 جميع الفئات
+                +content-of-categories( "ملابس" , [["header_cloth_categories.html","first","ملابس رجال"],["header_cloth_categories.html","second"," ملابس بنات"],["header_cloth_categories.html","third","ملابس أطفال"]])
+                +content-of-categories( "الكترونيات" , [["header_ele_categories.html","first","شاشات"],["header_ele_categories.html","second","لاب توب"],["header_ele_categories.html","third","موبايلات"],["header_ele_categories.html","forth","سماعات"]])
+                +content-of-categories( "العاب" , [["header_games_categories.html","first"," العاب بنات"],["header_games_categories.html","second","  العاب أولاد"]])
+
+
+                
+    include ../../footer/footer.pug
+
++scripts
+
+

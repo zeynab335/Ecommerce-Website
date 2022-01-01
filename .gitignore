@@ -1,0 +1,6 @@
+# this file of all files or folders that want ignore 
+
+# ignore node modules from git
+node_modules
+
+

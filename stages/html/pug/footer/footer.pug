@@ -1,0 +1,43 @@
+// start footer-function
+mixin footer-function(content_header,content_list)
+    .col-xs-12.col-lg.footer-col
+        .footer-content-header
+            h4 #{content_header}
+        .clearfix
+        .footer_content_info
+            ul.list-unstyled
+                each item in content_list 
+                    li: a.footer_link(href="") #{item} 
+    .clearfix        
+// end footer-function
+footer
+    .container
+        .row    
+            // contenet 1
+            - var content1_list = ["الالكترونيات","اللعاب","لابتوب","كاميرا"];
+            +footer-function( "الأكثر بحثًا",content1_list)
+            
+            // content 2 
+            - var content2_list = ["دخول/تسجيل", "عربة التسوق","المشتريات","القوائم المفضلة","أعدادات الحساب"];
+            +footer-function( "الحساب",content2_list)
+
+             // content 3 
+            - var content3_list = ["ابدء البيع","كيفية البيع","سياسة البيع"];
+            +footer-function( "تفاصيل البيع",content3_list)
+
+             // content 2 
+            - var content4_list = ["كيفية الشراء","تفاصيل ارجاع المنتجات "];
+            +footer-function( "تفاصيل الشراء",content4_list)
+        .clearfix     
+
+    // copywrite
+    .copy-write
+        .container.text-center
+
+            ul.list-unstyled
+                li: a(href=""): i.fab.fa-facebook
+                li: a(href=""): i.fas.fa-envelope-open
+                li: a(href=""): i.fab.fa-whatsapp
+                li: a(href=""): i.fab.fa-google-plus-g
+            h4  تسويق أونلاين @2020
+

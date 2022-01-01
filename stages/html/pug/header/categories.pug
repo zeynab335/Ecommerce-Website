@@ -1,0 +1,39 @@
+
+.slide-bar.no-slidebar
+            i.fas.fa-exchange-alt.fa-2x.toggle-icon
+            // slider-content
+            .slidebar-content
+                h2.h4: a(href="index.html") الصفحة الرئيسية
+                h2.h4: a(href="All_Categories/card.html")  المشتريات
+                h2.h4: a(href="Admin_Pages/user_page.html")  الحساب
+            
+                // first categories الملابس
+                .slidebar-categories.categories(data-value="categories")
+                    .row
+                        .col-lg-6.categories-header 
+                            h3.h5: a(href= "All_Categories/header_All_Categori.html")  جميع الفئات
+                        .co-lg-6.categories-toggle    
+                            i.fas.fa-angle-right.categories-toggle-icon
+
+                    // categories content        
+                    .categories-content
+                        ul.list-unstyled
+                            li: a(href="All_Categories/header_ele_categories.html")  الكترونيات 
+                            li: a(href="All_Categories/header_cloth_categories.html") ملابس رجال
+                            li: a(href="All_Categories/header_cloth_categories.html") ملابس نساء
+                            li: a(href="All_Categories/header_cloth_categories.html") ملابس اطفال
+                            li: a(href="") العاب للاطفال
+                            li: a(href="") أدوات منزلية
+                .clearfix
+                // third categories اللغه
+                .slidebar-categories.lang(data-value="lang")
+                    .row
+                        .col-lg-6.categories-header 
+                            h3.h5 اللغه
+                        .co-lg-6.categories-toggle    
+                            i.fas.fa-angle-right.categories-toggle-icon
+                    // categories content        
+                    .categories-content
+                        ul.list-unstyled
+                            li: a(href="")  English
+                .clearfix

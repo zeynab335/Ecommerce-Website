@@ -1,0 +1,92 @@
+footer{
+    background-color: $main-color;
+    float: $floar-right;
+    width: 100%;
+    padding: 25px 0 0 0;
+    margin-top: 45px;
+    font-family: $main-font;
+    color: white;
+
+    .row{
+        float: $floar-right;
+        width: 100%;
+        .footer-col{
+            float: $floar-right;
+            // start footer-header
+            .footer-content-header{
+                width: 75%;
+                float: $floar-right;
+                border-bottom: 2px solid $sec-color;
+
+                h4{
+                    margin-bottom: 0;
+                    float: $floar-right;
+                    padding-bottom: 4px;
+                }
+                
+            }
+            // end footer-header
+
+            // start footer-content-info
+            .footer_content_info{
+                width: 100%;
+                float: $floar-right;
+                padding: 25px 0 25px 0;
+                
+
+                ul{
+                    float: $floar-right;
+                    width: 100%;
+                    padding: 0;
+                    li{
+                        width: 100%;
+                        float: $floar-right;
+                        .footer_link{
+                            float: $floar-right !important;
+                            color: #9ba1a8 !important;
+                            padding-bottom: 15px;
+                            transition: all 0.5s;
+                            text-decoration: none;
+
+                            &:hover{
+                                text-decoration: none;
+                                color: white;
+                                padding-right: 15px;
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    // end footer continer
+
+    // start copywrite
+    .copy-write{
+        background-color: #285545;
+        ul {
+            margin-bottom: 0;
+            padding: 0;
+            li{
+                display: inline-block;
+                padding: 10px 10px 4px 0;
+                font-size: 15px;
+                a{
+                    float: $floar-right;
+                    color: white;
+                    
+                }
+            }
+        }
+        
+        h4{
+            margin-bottom: 0;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+    }
+    
+}
